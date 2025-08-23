@@ -18,11 +18,11 @@ fn main()
 {
     let mut  ar = vec![10, 20, 30, 40];
     ar.push(50);
-    first_element(&ar);
+    first_element(ar.clone());
     println!("{:?}", ar);
 }
 
-fn first_element(ar: &Vec<i32>)
+fn first_element(ar: Vec<i32>)
 {
     println!("{}", ar[0]);
 }
