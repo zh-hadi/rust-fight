@@ -11,11 +11,12 @@
 //     ar[0] = 100;
 //     println!("{}", ar[0]);
 // }
-
+mod my_info;
 
 // now using vector data 
 fn main()
 {
+    my_info::my_info();
     let mut  ar = vec![10, 20, 30, 40];
     ar.push(50);
     first_element(&mut ar);
