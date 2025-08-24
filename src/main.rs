@@ -18,5 +18,10 @@ fn main()
 fn first_element( ar: &mut Vec<i32>)
 {
     ar[0] = 02;
+
+    let mut arr = vec![1, 2, 3];
+    let arr2 =  &mut arr;
+    println!("{:?}", arr);
+    println!("{:?}", arr2);
    
 }
