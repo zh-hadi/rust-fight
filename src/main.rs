@@ -1,6 +1,7 @@
 
 mod my_info;
 mod array;
+mod rust_struct;
 
 
 fn main()
@@ -10,5 +11,6 @@ fn main()
     my_info::details::birth_date::birth_date();
 
     array::print_array();
+    rust_struct::learn_struct();
 
 }
