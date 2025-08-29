@@ -22,16 +22,15 @@ pub fn learn_struct()
         status: true
     };
 
-    let user2 = user1.clone();
+    let users = vec![user1.clone(), user1.clone(), user1.clone()];
 
-    user1.print_user();
-    
-    println!("user1 is: {:?}", user1);
-    println!("user2 is: {:?}", user2);
+    let first_user = users[0].clone();
+
+    println!("{:?}", users);
+    println!("{:?}", user1);
+    println!("{:?}", first_user);
 }
 
 // summery this lesson
 // --------------------
-// understand ownership deeply if struct mehtod
-// i am want refercnce then ownership move 
-// this data not avalible any more so clear struct or ther data 
+// 
