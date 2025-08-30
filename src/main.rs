@@ -2,7 +2,8 @@
 // mod my_info;
 // mod array;
 // mod rust_struct;
-mod text_format;
+// mod text_format;
+mod condition_oparator;
 
 
 fn main()
@@ -13,6 +14,6 @@ fn main()
 
     // array::print_array();
     // rust_struct::learn_struct();
-    text_format::print_text();
-
+    // text_format::print_text();
+    condition_oparator::load();
 }
