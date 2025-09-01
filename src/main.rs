@@ -3,7 +3,8 @@
 // mod array;
 // mod rust_struct;
 // mod text_format;
-mod condition_oparator;
+// mod condition_oparator;
+mod hash_map;
 
 
 fn main()
@@ -15,5 +16,6 @@ fn main()
     // array::print_array();
     // rust_struct::learn_struct();
     // text_format::print_text();
-    condition_oparator::load();
+    // condition_oparator::load();
+    hash_map::hash_map_load();
 }
