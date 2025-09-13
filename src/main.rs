@@ -4,7 +4,8 @@
 // mod rust_struct;
 // mod text_format;
 // mod condition_oparator;
-mod hash_map;
+// mod hash_map;
+mod enumaration;
 
 
 fn main()
@@ -17,5 +18,6 @@ fn main()
     // rust_struct::learn_struct();
     // text_format::print_text();
     // condition_oparator::load();
-    hash_map::hash_map_load();
+    // hash_map::hash_map_load();
+    enumaration::enumaration_load();
 }
