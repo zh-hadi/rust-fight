@@ -5,7 +5,8 @@
 // mod text_format;
 // mod condition_oparator;
 // mod hash_map;
-mod enumaration;
+// mod enumaration;
+mod user_io;
 
 
 fn main()
@@ -19,5 +20,6 @@ fn main()
     // text_format::print_text();
     // condition_oparator::load();
     // hash_map::hash_map_load();
-    enumaration::enumaration_load();
+    // enumaration::enumaration_load();
+    user_io::user_io_load();
 }
