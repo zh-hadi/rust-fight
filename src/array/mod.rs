@@ -4,8 +4,10 @@ pub fn print_array()
     let mut  ar = vec![10, 20, 30, 40];
     ar.push(50);
 
-    data_multiply_by_2(&ar);
+    let mut ar2 = data_multiply_by_2(ar.clone());
+    let ar3 = data_multiply_by_2_same(&mut ar2);
     println!("{:?}", ar);
+    println!("{:?}", ar2);
 
     // for (index, value) in ar.iter_mut().enumerate() {
     //     *value = *value * 2; 
@@ -49,8 +51,17 @@ fn array_brower_leaning()
 
 
 // array data double using new array function 
-fn data_multiply_by_2(ar: &Vec<i32>)
+fn data_multiply_by_2(mut ar: Vec<i32>)-> Vec<i32>
 {
-    println!("{:?}", ar);
+    for i in 0..ar.len()  {
+        ar[i] *= 2;
+    }
+    return ar;
 }
 // array data dobule in same array function 
+fn data_multiply_by_2_same(ar: &mut Vec<i32>)
+{
+    for i in 0..ar.len(){
+        ar[i] *= 2;
+    }
+}
