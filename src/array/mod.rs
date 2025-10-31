@@ -1,11 +1,30 @@
+#![allow(dead_code)]
 pub fn print_array()
 {
     let mut  ar = vec![10, 20, 30, 40];
     ar.push(50);
-    first_element(&mut ar);
+
+    data_multiply_by_2(&ar);
     println!("{:?}", ar);
 
-    array_brower_leaning();
+    // for (index, value) in ar.iter_mut().enumerate() {
+    //     *value = *value * 2; 
+    //     println!("index[{}] = {}", index, value);
+    // }
+
+    // for i in 0..ar.len() {
+    //     ar[i] = ar[i] * 2;
+    //     println!("{}", i);
+    // }
+
+    // println!("{:?}", ar);
+
+
+
+    // first_element(&mut ar);
+    // println!("{:?}", ar);
+
+    // array_brower_leaning();
 }
 
 fn first_element( ar: &mut Vec<i32>)
@@ -27,3 +46,11 @@ fn array_brower_leaning()
    println!("{:?}", ar2);
    println!("{:?}", ar);
 }
+
+
+// array data double using new array function 
+fn data_multiply_by_2(ar: &Vec<i32>)
+{
+    println!("{:?}", ar);
+}
+// array data dobule in same array function 
