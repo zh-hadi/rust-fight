@@ -5,7 +5,7 @@ pub fn print_array()
     ar.push(50);
 
     let mut ar2 = data_multiply_by_2(ar.clone());
-    let ar3 = data_multiply_by_2_same(&mut ar2);
+    data_multiply_by_2_same(&mut ar2);
     println!("{:?}", ar);
     println!("{:?}", ar2);
 
