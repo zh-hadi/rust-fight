@@ -1,6 +1,6 @@
 use serde::{Serialize, Deserialize};
 use std::fs::File;
-use std::io::Write;
+use std::io::{Read, Write};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 struct Person {
@@ -10,9 +10,11 @@ struct Person {
 
 pub fn initialization(){
     println!("hello world json");
-    struct_to_json();
+    // struct_to_json();
+    read_json_file();
 }
 
+#[allow(dead_code)]
 fn struct_to_json()
 {
     let p1 = Person {
@@ -34,4 +36,26 @@ fn struct_to_json()
 
     let mut file = File::create("person.json").expect("file not create");
     file.write_all(json_data.as_bytes()).expect("data not save here");
+}
+
+fn read_json_file()
+{
+    add_person("babor".to_string(), 25);
+}
+
+fn add_person(name: String, age: i32)
+{
+    let p1 = Person{
+        name: name,
+        age: age
+    };
+
+    println!("{:?}", p1);
+
+    let mut file = File::open("person.json").unwrap();
+    let mut data = String::new();
+    file.read_to_string(&mut data).unwrap();
+
+    println!("{}", data);
+
 }
