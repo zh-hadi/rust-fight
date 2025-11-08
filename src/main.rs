@@ -9,7 +9,8 @@
 // mod user_io;
 // mod json_data;
 // mod use_tokio;
-mod learn_time;
+// mod learn_time;
+mod learn_axum;
 
 
 #[tokio::main]
@@ -28,6 +29,21 @@ async fn main()
     // user_io::user_io_load();
     // json_data::json_convert::initialization();
     // use_tokio::learn_async::initialization().await;
-    learn_time::initialization();
+    // learn_time::initialization();
 
+    //---- learn async tokio more ----
+    let handle = tokio::spawn(async {
+        learn_axum::start::initialization().await;
+    });
+    async_fn_check();
+
+    
+    println!("Main() end");
+    handle.await.unwrap();
+    // --- end async tokio -----
+}
+
+pub fn async_fn_check()
+{
+    println!("sync function");
 }
