@@ -7,10 +7,12 @@
 // mod hash_map;
 // mod enumaration;
 // mod user_io;
-mod json_data;
+// mod json_data;
+mod use_tokio;
 
 
-fn main()
+#[tokio::main]
+async fn main()
 {
     // my_info::print_name();
     // my_info::details::print_age(44);
@@ -23,6 +25,7 @@ fn main()
     // hash_map::hash_map_load();
     // enumaration::enumaration_load();
     // user_io::user_io_load();
-    json_data::json_convert::initialization();
+    // json_data::json_convert::initialization();
+    use_tokio::learn_async::initialization().await;
 
 }
