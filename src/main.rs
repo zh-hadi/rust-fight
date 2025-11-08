@@ -8,7 +8,8 @@
 // mod enumaration;
 // mod user_io;
 // mod json_data;
-mod use_tokio;
+// mod use_tokio;
+mod learn_time;
 
 
 #[tokio::main]
@@ -26,6 +27,7 @@ async fn main()
     // enumaration::enumaration_load();
     // user_io::user_io_load();
     // json_data::json_convert::initialization();
-    use_tokio::learn_async::initialization().await;
+    // use_tokio::learn_async::initialization().await;
+    learn_time::initialization();
 
 }
