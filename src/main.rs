@@ -10,7 +10,8 @@
 // mod json_data;
 // mod use_tokio;
 // mod learn_time;
-mod learn_axum;
+// mod learn_axum;
+mod sqlx_learn;
 
 
 #[tokio::main]
@@ -32,18 +33,21 @@ async fn main()
     // learn_time::initialization();
 
     //---- learn async tokio more ----
-    let handle = tokio::spawn(async {
-        learn_axum::start::initialization().await;
-    });
-    async_fn_check();
+    // let handle = tokio::spawn(async {
+    //     learn_axum::start::initialization().await;
+    // });
+    // async_fn_check();
 
     
-    println!("Main() end");
-    handle.await.unwrap();
+    // println!("Main() end");
+    // handle.await.unwrap();
     // --- end async tokio -----
+
+    sqlx_learn::initialization().await;
 }
 
-pub fn async_fn_check()
-{
-    println!("sync function");
-}
+// for asyn test
+// pub fn async_fn_check()
+// {
+//     println!("sync function");
+// }
