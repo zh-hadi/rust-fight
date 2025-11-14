@@ -10,7 +10,7 @@ pub async fn db_connection()
 {
     dotenv().ok();
 
-    println!("{}", env::var("hadis").expect("panci"));
+    println!("{}", env::var("DATABASE_URL").expect("panci"));
 }
 // migrate 
 // insert data
