@@ -1,5 +1,10 @@
 use dotenvy::dotenv;
 use std::env;
+use sqlx::any::AnyConnectOptions;
+use sqlx::AnyConnection;
+use std::str::FromStr;
+
+
 
 pub async fn initialization() 
 {
@@ -10,7 +15,18 @@ pub async fn db_connection()
 {
     dotenv().ok();
 
-    println!("{}", env::var("DATABASE_URL").expect("panci"));
+    let db = env::var("DATABASE_URL").unwrap();
+
+    let options = AnyConnectOptions::from_str(&db)
+        .expect("Invalid database URL");
+
+    let _conn = AnyConnection::connect_with(&options)
+        .await
+        .expect("failed to connect to database");
+
+    println!("connect successfully!");
+
+
 }
 // migrate 
 // insert data
